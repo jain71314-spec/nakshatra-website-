@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nakshatra - Astronomy Society</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0b0f1a;
+            color: white;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        /* Make particles background fill the page */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            top: 0;
+            left: 0;
+        }
+        header {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(11, 15, 26, 0.8);
+            animation: fadeIn 2s ease-in-out;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            color: #ffcc00;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        nav {
+            text-align: center;
+            background: rgba(17, 17, 17, 0.8);
+            padding: 0.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav a {
+            color: #ffcc00;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: white;
+        }
+        section {
+            padding: 2rem;
+            max-width: 900px;
+            margin: auto;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 1s ease forwards;
+        }
+        section:nth-of-type(1) { animation-delay: 0.5s; }
+        section:nth-of-type(2) { animation-delay: 1s; }
+        section:nth-of-type(3) { animation-delay: 1.5s; }
+        section:nth-of-type(4) { animation-delay: 2s; }
+
+        h2 {
+            color: #ffcc00;
+            border-bottom: 2px solid #ffcc00;
+            padding-bottom: 0.5rem;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .gallery img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #ffcc00;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(17, 17, 17, 0.8);
+            color: #aaa;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00; }
+            to { text-shadow: 0 0 20px #ffcc00, 0 0 30px #ffcc00; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Starry background -->
+    <div id="particles-js"></div>
+
+    <header>
+        <h1>🌌 Nakshatra</h1>
+        <p>Exploring the Universe, One Star at a Time</p>
+    </header>
+
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#events">Events</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            Nakshatra is the official Astronomy & Space Society of NSUT. 
+            We are a group of space enthusiasts who believe the night sky is not just to be admired, but explored. 
+            From stargazing nights to rocket-building workshops, we aim to bring the wonders of the cosmos closer to everyone.
+        </p>
+    </section>
+
+    <section id="events">
+        <h2>Events & Activities</h2>
+        <ul>
+            <li>🔭 Stargazing Nights – Experience the beauty of planets, stars, and galaxies.</li>
+            <li>🧠 Astronomy Quizzes – Test your cosmic knowledge.</li>
+            <li>🎙 Guest Talks – Learn from scientists and space experts.</li>
+            <li>🚀 Rocket-Building Workshops – Build and launch your own model rockets.</li>
+            <li>🌠 Astrophotography Sessions – Capture the magic of the night sky.</li>
+        </ul>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="https://images.unsplash.com/photo-1505506874110-6a7a69069a08?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Space Image">
+            <img src="https://plus.unsplash.com/premium_photo-1669839137069-4166d6ea11f4?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Galaxy">
+            <img src="https://images.unsplash.com/photo-1541873676-a18131494184?q=80&w=718&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Astronomy">
+            <img src="https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Rocket">
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact / Join Us</h2>
+        <p>Email: <a href="mailto:nakshatra@nsut.edu" style="color:#ffcc00;">nakshatra@nsut.edu</a></p>
+        <p>Instagram: <a href="#" style="color:#ffcc00;">@nakshatra_nsut</a></p>
+        <p>Or visit us in the Astronomy Lab, Block C, NSUT Campus.</p>
+    </section>
+
+    <footer>
+        <p>© 2025 Nakshatra Astronomy Society | Designed by Lavanya</p>
+    </footer>
+
+    <!-- Load Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 80 },
+                "color": { "value": "#ffffff" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.7 },
+                "size": { "value": 2 },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 1,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out"
+                }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": { "enable": true, "mode": "repulse" }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+
+</body>
+</html>
